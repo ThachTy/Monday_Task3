@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+$font-famlily: Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP,
+  sans-serif;
+$tile-font-family: Poppins, Roboto, Noto Sans Hebrew, Noto Kufi Arabic,
+  Noto Sans JP, sans-serif;
+
+body {
+  font-family: $tile-font-family;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
