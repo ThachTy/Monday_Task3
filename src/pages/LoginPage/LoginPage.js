@@ -2,7 +2,7 @@ import React from "react";
 import "./LoginPage.scss";
 import { Divider, Form, Input } from "antd";
 import FormItem from "antd/es/form/FormItem";
-
+import Button from "../../components/Button/Button";
 export default function LoginPage() {
   return (
     <main id="login__new">
@@ -14,14 +14,14 @@ export default function LoginPage() {
               Get started - it's free. No credit card needed.
             </p>
             <div className="form_content">
-              <button className="btn_google" type="button">
+              <Button className="btn_google" type="submit">
                 <img
-                  className="icon-google"
+                  className="icon-google w-5 h-5 mr-2"
                   src="https://dapulse-res.cloudinary.com/image/upload/remote_logos/995426/google-icon.svg"
                   alt="logo Google"
                 />
                 Continue with Google
-              </button>
+              </Button>
               <Divider>Or</Divider>
               <Form>
                 <FormItem>

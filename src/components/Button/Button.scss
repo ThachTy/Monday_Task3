@@ -1,0 +1,7 @@
+@use "../../assets/style/vairiables";
+@use "../../assets/style/mixin";
+
+.button {
+  @include mixin.button;
+  @include mixin.flex-center;
+}
