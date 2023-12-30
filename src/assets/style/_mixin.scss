@@ -1,3 +1,5 @@
+@use "./vairiables";
+
 /* Button */
 @mixin button() {
   width: 100%;
@@ -8,6 +10,11 @@
   line-height: 1.5rem;
   transition: 0.25s all;
   border: 1px solid rgb(201, 201, 201);
+}
+
+@mixin button-disable {
+  background-color: vairiables.$disabled-background;
+  color: vairiables.$disabel-text-color;
 }
 
 /* Input */
