@@ -14,6 +14,11 @@ export default function HomePage() {
         <li>
           <Link to={"/users/invitation/accept"}>/users/invitation/accept</Link>
         </li>
+        <li>
+          <Link to={"/users/invitation/accept_2"}>
+            /users/invitation/accept_2
+          </Link>
+        </li>
       </ul>
     </main>
   );

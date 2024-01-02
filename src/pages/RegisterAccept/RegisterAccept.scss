@@ -1,7 +1,7 @@
 @use "../../assets/style/mixin";
 @use "../../assets/style/vairiables";
 
-#register_accept {
+.register_accept {
   width: 100%;
   .invitation__container {
     width: 100%;
@@ -24,7 +24,7 @@
   }
 }
 
-#register_accept {
+.register_accept {
   .invitation__content {
     height: calc(100vh - 7vh);
     display: flex;
@@ -39,23 +39,25 @@
       }
     }
 
-    .content__body {
-      .heading {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-    }
-
     .content__footer {
-      .btn-continue {
+      @mixin btn() {
+        max-width: 200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 150px;
-        padding: 0.5rem 1rem;
-        margin-left: auto;
+        padding: 0.5rem 0.7rem;
         color: #fff;
         font-weight: 300;
+        display: inline-block;
+      }
+
+      .btn-back {
+        @include btn();
+        background-color: vairiables.$disabled-background;
+        color: gray;
+      }
+      .btn-continue {
+        @include btn();
         background-color: vairiables.$color-2;
       }
 

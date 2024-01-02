@@ -1,8 +1,8 @@
 import React from "react";
-import "./GroupRadioButton.scss";
-import RadioButton from "../../../../components/RadioButton/RadioButton";
+import "./GroupCheckBox.scss";
+import CheckBox from "../../../../components/Checkbox/CheckBox";
 
-function GroupRadioButton({ list, message, heading, group, handleChange }) {
+function GroupCheckBox({ list, message, heading, group, handleChange }) {
   return (
     <>
       <h3 className="heading">{heading}</h3>
@@ -10,7 +10,7 @@ function GroupRadioButton({ list, message, heading, group, handleChange }) {
       <div className="group__tag">
         {list.map((item, index) => {
           return (
-            <RadioButton
+            <CheckBox
               key={item.value + index}
               id={item.value}
               name={group}
@@ -18,7 +18,7 @@ function GroupRadioButton({ list, message, heading, group, handleChange }) {
               handleChange={handleChange}
             >
               {item.label}
-            </RadioButton>
+            </CheckBox>
           );
         })}
       </div>
@@ -26,4 +26,4 @@ function GroupRadioButton({ list, message, heading, group, handleChange }) {
   );
 }
 
-export default GroupRadioButton;
+export default GroupCheckBox;

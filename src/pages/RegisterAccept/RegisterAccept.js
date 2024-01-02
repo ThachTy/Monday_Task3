@@ -34,10 +34,10 @@ const list = [
       },
     ],
   },
-  { value: "personal", label: "personal", sub: [] },
+  { value: "Personal", label: "Personal", sub: [] },
   {
-    value: "school",
-    label: "school",
+    value: "School",
+    label: "School",
     sub: [
       {
         value: "Undergraduate student",
@@ -124,7 +124,7 @@ function RegisterAccept() {
   };
 
   return (
-    <main id="register_accept">
+    <main className="register_accept">
       <div className="invitation__container">
         <div className="invitation__left">
           <div className="invitation__content">
@@ -157,7 +157,7 @@ function RegisterAccept() {
                 )}
               </div>
             </div>
-            <div className="content__footer">
+            <div className="content__footer flex justify-end items-end">
               <Button
                 disable={disable}
                 className={
@@ -165,7 +165,7 @@ function RegisterAccept() {
                 }
                 type="button"
               >
-                Continue
+                <span className="mr-2">Continue</span>
                 <i className="fa-solid fa-angle-right"></i>
               </Button>
             </div>
