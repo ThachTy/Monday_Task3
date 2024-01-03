@@ -31,7 +31,7 @@ export default function LoginPage() {
                     placeholder="name@company.com"
                   ></Input>
                 </FormItem>
-                <button className="from-submit" type="submit">
+                <button className="from-submit w-[50%]" type="submit">
                   Continue
                 </button>
               </Form>

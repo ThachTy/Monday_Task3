@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { Select } from "antd";
 import "./InvitePage.scss";
 import "../RegisterAccept/RegisterAccept.scss";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
-import { Select } from "antd";
 
 function InvitePage() {
   const [emails, setEmails] = useState([

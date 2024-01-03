@@ -2,8 +2,6 @@
 
 /* Button */
 @mixin button() {
-  width: 100%;
-  max-width: 200px;
   border-radius: 5px;
   padding: 0.3rem 0.7rem;
   outline: none;
@@ -15,7 +13,7 @@
 
 @mixin button-disable {
   background-color: vairiables.$disabled-background;
-  color: vairiables.$disabel-text-color;
+  color: vairiables.$disable-text-color;
 }
 
 @mixin button-continue {
