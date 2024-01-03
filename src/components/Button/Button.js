@@ -12,7 +12,11 @@ export default function Button({
       onClick={handleClick}
       disabled={disable}
       type={type}
-      className={`button + ${className}`}
+      className={
+        disable
+          ? `button button-disable ${className}`
+          : `button button-continue ${className}`
+      }
     >
       {children}
     </button>

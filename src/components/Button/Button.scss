@@ -5,3 +5,11 @@
   @include mixin.button;
   @include mixin.flex-center;
 }
+
+.button-disable {
+  @include mixin.button-disable;
+}
+
+.button-continue {
+  @include mixin.button-continue;
+}

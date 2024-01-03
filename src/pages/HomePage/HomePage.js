@@ -19,6 +19,10 @@ export default function HomePage() {
             /users/invitation/accept_2
           </Link>
         </li>
+
+        <li>
+          <Link to={"/invite_your_team"}>/invite_your_team</Link>
+        </li>
       </ul>
     </main>
   );

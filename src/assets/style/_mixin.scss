@@ -3,8 +3,9 @@
 /* Button */
 @mixin button() {
   width: 100%;
+  max-width: 200px;
   border-radius: 5px;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.7rem;
   outline: none;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -15,6 +16,11 @@
 @mixin button-disable {
   background-color: vairiables.$disabled-background;
   color: vairiables.$disabel-text-color;
+}
+
+@mixin button-continue {
+  background-color: vairiables.$continue-background;
+  color: #fff;
 }
 
 /* Input */
@@ -32,7 +38,7 @@
 /* Flex-center */
 @mixin flex-center {
   display: flex;
-  ali1gn-items: center;
+  align-items: center;
   justify-content: center;
 }
 

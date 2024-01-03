@@ -1,0 +1,4 @@
+@use "../../assets/style/mixin";
+.input {
+  @include mixin.controls;
+}
