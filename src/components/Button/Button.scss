@@ -5,3 +5,13 @@
   @include mixin.button;
   @include mixin.flex-center;
 }
+
+.button-disable {
+  @include mixin.button-disable;
+  min-width: 200px;
+}
+
+.button-continue {
+  @include mixin.button-continue;
+  min-width: 200px;
+}

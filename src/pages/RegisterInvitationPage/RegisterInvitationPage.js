@@ -80,9 +80,9 @@ function RegisterInvitationPage() {
               </Form>
             </div>
             <div className="content__footer">
-              <Button className="btn-continue" type="button">
+              <Button disable={true} type="button">
                 Continue
-                <i className="fa-solid fa-angle-right"></i>
+                <i className="fa-solid fa-angle-right mx-2"></i>
               </Button>
             </div>
           </div>

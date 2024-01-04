@@ -1,0 +1,64 @@
+@use "../../assets/style//mixin";
+@use "../../assets/style/vairiables";
+
+.radiobutton {
+  color: gray;
+  font-size: 0.8em;
+  font-weight: 300;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: 1px solid #cbcbcb;
+  border-radius: 50rem;
+  @include mixin.flex-center;
+  gap: 5px;
+  .radio {
+    display: none;
+  }
+
+  .dot {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      border-radius: 50%;
+      padding: 2px;
+      box-shadow: 0 0 0 1px rgb(189, 189, 189);
+      transition: all 0.25s linear;
+    }
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: 2;
+      border-radius: 50%;
+      transition: all 0s ease-in;
+    }
+  }
+  .radio:checked ~ .dot::after {
+    background-color: vairiables.$color-2;
+    box-shadow: 0 0 0 1px vairiables.$color-2;
+    width: 100%;
+    height: 100%;
+  }
+  .radio:checked ~ .dot::before {
+    background-color: #fff;
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
