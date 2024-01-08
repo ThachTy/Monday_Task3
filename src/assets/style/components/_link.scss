@@ -1,0 +1,8 @@
+/* Link */
+
+@mixin base($color) {
+  color: $color;
+  &:hover {
+    text-decoration: underline;
+  }
+}

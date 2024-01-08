@@ -1,4 +1,4 @@
-@use "../../assets/style/mixin";
+@use "../../assets/style/mixin/mixin.scss";
 .input {
-  @include mixin.controls;
+  @include mixin.input-base;
 }

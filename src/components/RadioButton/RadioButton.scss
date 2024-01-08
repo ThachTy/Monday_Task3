@@ -1,5 +1,5 @@
-@use "../../assets/style//mixin";
-@use "../../assets/style/vairiables";
+@use "../../assets/style/mixin/mixin.scss";
+@use "../../assets/style/vairiables/vairiables.scss";
 
 .radiobutton {
   color: gray;
@@ -50,8 +50,8 @@
     }
   }
   .radio:checked ~ .dot::after {
-    background-color: vairiables.$color-2;
-    box-shadow: 0 0 0 1px vairiables.$color-2;
+    background-color: vairiables.$text-color-2;
+    box-shadow: 0 0 0 1px vairiables.$text-color-2;
     width: 100%;
     height: 100%;
   }
