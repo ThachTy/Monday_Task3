@@ -1,17 +1,15 @@
-@use "../../assets/style/vairiables";
-@use "../../assets/style/mixin";
+@use "../../assets/style/mixin/mixin.scss";
 
 .button {
-  @include mixin.button;
+  @include mixin.button-base;
   @include mixin.flex-center;
+  min-width: 200px;
 }
 
 .button-disable {
   @include mixin.button-disable;
-  min-width: 200px;
 }
 
 .button-continue {
   @include mixin.button-continue;
-  min-width: 200px;
 }

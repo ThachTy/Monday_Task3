@@ -1,0 +1,27 @@
+@use "../vairiables/vairiables.scss";
+
+/* Button */
+@mixin base {
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition: 0.25s all;
+  border: 1px solid rgb(201, 201, 201);
+}
+
+@mixin disable {
+  background-color: vairiables.$background-disabled;
+  color: vairiables.$text-color-disable;
+}
+
+@mixin continue {
+  background-color: vairiables.$background-continue;
+  color: #fff;
+}
+
+@mixin back {
+  background-color: vairiables.$background-disabled;
+  color: gray;
+}

@@ -1,5 +1,5 @@
-@use "../../assets/style/mixin";
-@use "../../assets/style/vairiables";
+@use "../../assets/style/mixin/mixin.scss";
+@use "../../assets/style/vairiables/vairiables.scss";
 
 .register_accept {
   width: 100%;
@@ -40,30 +40,8 @@
     }
 
     .content__footer {
-      @mixin btn() {
-        max-width: 200px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 0.7rem;
-        color: #fff;
-        font-weight: 300;
-        display: inline-block;
-      }
-
       .btn-back {
-        @include btn();
-        background-color: vairiables.$disabled-background;
-        color: gray;
-      }
-      .btn-continue {
-        @include btn();
-        background-color: vairiables.$color-2;
-      }
-
-      .btn-disable {
-        @include mixin.button-disable;
-        border: none;
+        @include mixin.button-back;
       }
     }
 

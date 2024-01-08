@@ -22,7 +22,7 @@ export default function LoginPage() {
                 />
                 Continue with Google
               </Button>
-              <Divider>Or</Divider>
+              <Divider className="text-gray-400">Or</Divider>
               <Form>
                 <FormItem>
                   <Input
@@ -31,7 +31,7 @@ export default function LoginPage() {
                     placeholder="name@company.com"
                   ></Input>
                 </FormItem>
-                <button className="from-submit w-[50%]" type="submit">
+                <button className="form-submit w-[50%]" type="submit">
                   Continue
                 </button>
               </Form>

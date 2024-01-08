@@ -158,13 +158,7 @@ function RegisterAccept() {
               </div>
             </div>
             <div className="content__footer flex justify-end items-end">
-              <Button
-                disable={disable}
-                className={
-                  disable ? "btn-disable btn-continue" : "btn-continue"
-                }
-                type="button"
-              >
+              <Button disable={disable} type="button">
                 <span className="mr-2">Continue</span>
                 <i className="fa-solid fa-angle-right"></i>
               </Button>
