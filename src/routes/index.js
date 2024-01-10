@@ -6,7 +6,7 @@ const RoutesDom = () => {
   const renderRoute = (route, index) => {
     return (
       <Route
-        key={"route" + index}
+        key={"route" + index + route.path}
         index={route.index ? true : false}
         path={route.path}
         element={route.element}

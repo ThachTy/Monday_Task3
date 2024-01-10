@@ -10,6 +10,7 @@ function CreateBoard() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
   return (
     <main id="createboard" className={!isModalOpen ? "hidden" : ""}>
       <div className="modal">
