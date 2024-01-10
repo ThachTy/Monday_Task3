@@ -1,10 +1,16 @@
 import { Routes, Route, Link } from "react-router-dom";
+
+/* layout */
+import CreateBoard from "./layout/CreateBoard/CreateBoard";
+
+/* Page */
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import RegisterInvitationPage from "./pages/RegisterInvitationPage/RegisterInvitationPage";
+import InvitePage from "./pages/InvitePage/InvitePage";
 import RegisterAccept from "./pages/RegisterAccept/RegisterAccept";
 import RegisterAccept2 from "./pages/RegisterAccept2/RegisterAccept2";
-import InvitePage from "./pages/InvitePage/InvitePage";
+import CreateBoardName from "./pages/CreateBoardName/CreateBoardName";
+import RegisterInvitationPage from "./pages/RegisterInvitationPage/RegisterInvitationPage";
 
 function App() {
   return (
@@ -29,6 +35,10 @@ function App() {
           element={<RegisterAccept2 />}
         ></Route>
         <Route path="/invite_your_team" element={<InvitePage />}></Route>
+
+        <Route path="/create_board" element={<CreateBoard />}>
+          <Route index path="name" element={<CreateBoardName />}></Route>
+        </Route>
       </Routes>
     </>
   );

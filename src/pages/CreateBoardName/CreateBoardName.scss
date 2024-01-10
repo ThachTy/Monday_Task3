@@ -1,0 +1,14 @@
+@use "../../assets/style/vairiables/vairiables.scss";
+.text-sub {
+  min-height: max-content;
+  padding: 1.5rem;
+  border-radius: 5px;
+  background-color: #f6f7fb;
+  margin: 2rem 0;
+}
+
+.text {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: vairiables.$text-color-3;
+}

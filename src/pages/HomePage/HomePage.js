@@ -8,20 +8,27 @@ export default function HomePage() {
         <li>
           <Link to={"/users/sign_up_new"}>/users/sign_up_new</Link>
         </li>
+        {/*  */}
         <li>
           <Link to={"/users/invitation"}>/users/invitation</Link>
         </li>
+        {/*  */}
         <li>
           <Link to={"/users/invitation/accept"}>/users/invitation/accept</Link>
         </li>
+        {/*  */}
         <li>
           <Link to={"/users/invitation/accept_2"}>
             /users/invitation/accept_2
           </Link>
         </li>
-
+        {/*  */}
         <li>
           <Link to={"/invite_your_team"}>/invite_your_team</Link>
+        </li>
+        {/*  */}
+        <li>
+          <Link to={"/create_board/name"}>/create_board</Link>
         </li>
       </ul>
     </main>

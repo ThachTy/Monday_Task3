@@ -1,6 +1,6 @@
+@use "../../../../assets/style/mixin/mixin.scss";
 .heading {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  @include mixin.heading;
 }
 
 .message {

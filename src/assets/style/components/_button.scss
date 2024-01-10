@@ -25,3 +25,12 @@
   background-color: vairiables.$background-disabled;
   color: gray;
 }
+
+@mixin close {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 50px;
+  height: 5vh;
+  margin-left: auto;
+}
