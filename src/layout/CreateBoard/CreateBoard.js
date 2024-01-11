@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import "./CreateBoard.scss";
 import DemoBoard from "./components/DemoBoard/DemoBoard";
 import Button from "../../components/Button/Button";
+import { useSelector } from "react-redux";
+import { sliceString } from "../../utils/method";
 function CreateBoard() {
   const [disable, setDisable] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const { nameProject } = useSelector((state) => state.demoBoardReducer);
+
+  useEffect(() => {
+    let checkDisable = nameProject?.length > 0 ? false : true;
+    setDisable(checkDisable);
+  }, [nameProject]);
 
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -38,7 +47,7 @@ function CreateBoard() {
                   <span>Back</span>
                 </a>
                 {/* Continue */}
-                <Button className={""} disable={disable} type="button">
+                <Button disable={disable} type="button">
                   <span className="mr-2">Next</span>
                   <i className="fa-solid fa-angle-right"></i>
                 </Button>
@@ -46,8 +55,23 @@ function CreateBoard() {
             </div>
           </div>
           <div className="modal__right">
-            {/* Demo Table */}
-            <DemoBoard></DemoBoard>
+            <main className="demotable">
+              {/* Demo Table */}
+              <h3 className="title">
+                {nameProject !== "" ? (
+                  sliceString(nameProject, 20)
+                ) : (
+                  <span className="line"></span>
+                )}
+              </h3>
+              {/* Name Project */}
+              <div className="demotable__tables">
+                {/* Table 1 */}
+                <DemoBoard></DemoBoard>
+                {/* Table 2 */}
+                <DemoBoard></DemoBoard>
+              </div>
+            </main>
           </div>
         </div>
       </div>

@@ -8,8 +8,12 @@
 
 .button-disable {
   @include mixin.button-disable;
+  color: inherit;
 }
 
 .button-continue {
   @include mixin.button-continue;
+  * {
+    color: inherit;
+  }
 }

@@ -1,11 +1,19 @@
 import React, { useRef } from "react";
 import Input from "../../components/Input/Input";
 import "./CreateBoardName.scss";
+import { useDispatch } from "react-redux";
+import { createAction } from "@reduxjs/toolkit";
 function CreateBoardName() {
   const inputRef = useRef(null);
-
+  const dispatch = useDispatch();
   const handelChangeName = () => {
     console.log(inputRef.current.value);
+
+    // let action = createAction({
+    //   nameProject: inputRef.current.value,
+    // });
+
+    dispatch({ type: "demoBoard/action", payload: inputRef.current.value });
   };
 
   return (

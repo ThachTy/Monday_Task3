@@ -1,4 +1,5 @@
 @use "../../assets/style/mixin/mixin.scss";
+@use "../../assets/style/vairiables/vairiables.scss";
 
 #createboard {
   position: fixed;
@@ -49,7 +50,33 @@
         background-color: #f3f3f3;
         width: 50%;
         height: 100%;
-        padding: 5rem 0 5rem 5rem;
+        padding: 4rem 0 4rem 5rem;
+
+        .demotable {
+          height: max-content;
+          border-radius: 3px;
+          padding: 3rem 0 2rem 3rem;
+          box-shadow: 0 0 7rem 0 vairiables.$background-blue-1;
+          .demotable__tables {
+            height: max-content;
+            min-width: 100%;
+            overflow-x: auto;
+          }
+          .title {
+            $height: 3rem;
+            display: flex;
+            align-items: center;
+            height: $height;
+            font-size: 2.5rem;
+            line-height: $height;
+            margin-bottom: 1rem;
+            color: vairiables.$text-color-3;
+            .line {
+              @include mixin.line(170px, 9px);
+              background-color: vairiables.$background-gray-1;
+            }
+          }
+        }
       }
     }
   }

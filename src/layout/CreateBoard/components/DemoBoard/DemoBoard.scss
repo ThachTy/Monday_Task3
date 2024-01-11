@@ -1,59 +1,44 @@
 @use "../../../../assets/style/vairiables/vairiables.scss";
 @use "../../../../assets/style/mixin/mixin.scss";
 
-.demoboard {
-  height: 500px;
-  border-radius: 3px;
-  padding: 3rem 0 2rem 3rem;
-  box-shadow: 0 0 7rem 0 vairiables.$background-blue-1;
-
-  .title {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    margin-bottom: 4rem;
-    .line {
-      @include mixin.line(170px, 9px);
-      background-color: vairiables.$background-gray-1;
+.board {
+  .board-row {
+    padding: 1rem 0;
+    .line-title {
+      @include mixin.line(100px, 5px);
+      background-color: vairiables.$background-blue-1;
     }
   }
-  .board {
-    .board-row {
-      padding: 1rem 0;
-      .line-title {
-        @include mixin.line(100px, 5px);
-        background-color: vairiables.$background-blue-1;
+
+  .board-content {
+    position: relative;
+    height: max-content;
+    display: grid;
+    overflow: hidden;
+    border-radius: 5px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 50px;
+    // grid-template-rows: auto;
+    &::after {
+      content: "";
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      background-color: vairiables.$background-blue-1;
+    }
+    .board-cell {
+      height: 35px;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgb(200, 199, 199);
+      padding: 0.5rem 0rem 0.5rem 1rem;
+      .line-cell {
+        @include mixin.line(80px, 5px);
+        background-color: vairiables.$background-gray-1;
       }
     }
-
-    .board-content {
-      position: relative;
-      height: max-content;
-      display: grid;
-      overflow: hidden;
-      border-radius: 5px;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 50px;
-      grid-template-rows: repeat(5, 1fr);
-      &::after {
-        content: "";
-        width: 5px;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        background-color: vairiables.$background-blue-1;
-      }
-      .board-cell {
-        display: flex;
-        align-items: center;
-        border: 1px solid rgb(200, 199, 199);
-        padding: 0.5rem 0rem 0.5rem 1rem;
-        .line-cell {
-          @include mixin.line(80px, 5px);
-          background-color: vairiables.$background-gray-1;
-        }
-      }
-      .last-cell {
-        grid-column: 1 / span 5;
-      }
+    .last-cell {
+      grid-column: 1 / span 5;
     }
   }
 }
